@@ -1,6 +1,8 @@
 # Entretien
 
-Expliquez les notions suivantes et citer des examples.
+1. Code review de l'application Angular
+
+2. Expliquez les notions suivantes et citer des examples
 
 ## HTML
 
