@@ -1,27 +1,71 @@
 # Entretien
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.1.
+Expliquez les notions suivantes et citer des examples.
 
-## Development server
+## HTML
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Un "Élément" HTML correspond à une balise HTML comme une `<div>`.
 
-## Code scaffolding
+- Structure d'un document HTML et rôle des différentes parties
+- Élément "de bloc" VS "en ligne"
+- Élément "neutre" VS "ayant une valeur sémantique"
+- Élément vide (ou auto-fermé) VS "ayant un contenu potentiel"
+- Attribut "universels" VS "spécifiques à un élément" comme `<a>`, `<img>` et `<input>`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## CSS
 
-## Build
+### Sélecteurs
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Sélecteurs d'élement comme `<p>` ou `<a>`
+- Sélecteurs d'`id` et de `class`
+- Sélecteurs d'attribut HTML
+- Sélecteur d'éléments descendants
+- Sélecteurs d'"enfant direct"
+- Sélecteurs de "voisin direct"
+- Sélecteurs de "voisin"
+- Sélecteur `*`
+- Sélecteurs de pseudo-classe
+- Sélecteurs de pseudo-élément
 
-## Running unit tests
+### Propriétés et valeurs
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Police de caractères, taille et couleur des textes
+- Couleurs d'arrière-plan et des bords des éléments
+- Épaisseur, type et arrondi des bords des éléments
 
-## Running end-to-end tests
+### Le positionnement
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Quelques valeurs possibles de la propriété `position` et leur effet
 
-## Further help
+### La mise en page
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Quelques valeurs possibles de la propriété `display` et leur effet
+
+### Responsive design
+
+- Fonctionnement général
+
+## JavaScript
+
+### Language
+
+- `var` VS `const` VS `let`
+- Portée des variables
+- Hoisting
+- Les types en JS (`string`, ...)
+- Le prototype d'un object
+- Parcourir un tableau, un objet
+- Trouver un élément dans un tableau
+- Couper une chaîne de caractères sur la base d'un séparateur
+- Spread operator
+- Destructuration
+- Fonction pure VS impure (immutabilité)
+- Fonction nommée, anonyme et fléchée (impact sur la valeur de `this`)
+- Les classes en ES6
+- Les `Promise`
+
+### Runtime: DOM
+
+- Event loop, thread (mono ou multi ?) et code asynchrone
+- setTimeout, set...
+- Event listener
