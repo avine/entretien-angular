@@ -2,16 +2,16 @@
 
 1. Code review de l'application Angular
 
-2. Expliquez les notions suivantes et citer des examples
+2. Expliquez les notions suivantes et donnez des examples
 
 ## HTML
 
-Un "Élément" HTML correspond à une balise HTML comme une `<div>`.
+Le terme "Élément" HTML correspond à une balise HTML comme une `<div>`.
 
 - Structure d'un document HTML et rôle des différentes parties
 - Élément "de bloc" VS "en ligne"
 - Élément "neutre" VS "ayant une valeur sémantique"
-- Élément vide (ou auto-fermé) VS "ayant un contenu potentiel"
+- Élément vide (ou auto-fermé) VS "acceptant un contenu"
 - Attribut "universels" VS "spécifiques à un élément" comme `<a>`, `<img>` et `<input>`
 
 ## CSS
@@ -25,15 +25,15 @@ Un "Élément" HTML correspond à une balise HTML comme une `<div>`.
 - Sélecteurs d'"enfant direct"
 - Sélecteurs de "voisin direct"
 - Sélecteurs de "voisin"
-- Sélecteur `*`
+- Sélecteur universel `*`
 - Sélecteurs de pseudo-classe
 - Sélecteurs de pseudo-élément
 
 ### Propriétés et valeurs
 
 - Police de caractères, taille et couleur des textes
-- Couleurs d'arrière-plan et des bords des éléments
-- Épaisseur, type et arrondi des bords des éléments
+- Couleur d'arrière-plan
+- Épaisseur, type, couleur et arondi des bords des éléments
 
 ### Le positionnement
 
@@ -45,7 +45,7 @@ Un "Élément" HTML correspond à une balise HTML comme une `<div>`.
 
 ### Responsive design
 
-- Fonctionnement général
+- Fonctionnement général, propriété CSS à utiliser
 
 ## JavaScript
 
@@ -58,12 +58,14 @@ Un "Élément" HTML correspond à une balise HTML comme une `<div>`.
 - Le prototype d'un object
 - Parcourir un tableau, un objet
 - Trouver un élément dans un tableau
+- Verifier la présence d'une clé dans un objet
 - Couper une chaîne de caractères sur la base d'un séparateur
-- Spread operator
-- Destructuration
+- "Destructuring": créer une variable à partir du premier élément d'un tableau ou d'une clé d'un objet
+- "Spread operator": créer un nouveau tableau/object à partir de 2 autres
 - Fonction pure VS impure (immutabilité)
 - Fonction nommée, anonyme et fléchée (impact sur la valeur de `this`)
 - Les classes en ES6
+- Callback hell
 - Les `Promise`
 
 ### Runtime: DOM
