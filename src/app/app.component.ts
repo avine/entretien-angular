@@ -34,10 +34,6 @@ export class AppComponent {
     return count;
   }
 
-  checkboxId(todo: TodosResponseDto['todos'][0]) {
-    return 'check-' + todo.id;
-  }
-
   toggleTodo(todo: TodosResponseDto['todos'][0]) {
     todo.completed = !todo.completed;
   }
