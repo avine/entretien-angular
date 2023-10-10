@@ -1,0 +1,15 @@
+<nav class="mb-4 navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <i class="d-inline-block align-text-top bi bi-list-check"></i>
+      My todo list
+    </a>
+
+    <div *ngIf="remainingTodosCount !== null">
+      Remaining:
+      <span class="badge" [class.bg-danger]="remainingTodosCount > 0" [class.bg-success]="remainingTodosCount === 0">
+        {{ remainingTodosCount }}
+      </span>
+    </div>
+  </div>
+</nav>

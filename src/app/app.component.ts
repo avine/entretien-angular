@@ -1,44 +1,28 @@
-import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
-
-interface TodosResponseDto {
-  todos: {
-    id: number;
-    userId: number;
-    todo: string;
-    completed: any;
-  }[];
-}
+import { Component, OnInit } from '@angular/core';
+import { BehaviorSubject, Observable, filter, map } from 'rxjs';
+import { AppService } from './app.service';
+import { Todo } from './app.types';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
-  todos: TodosResponseDto['todos'] = [];
+export class AppComponent implements OnInit {
+  protected todos$ = new BehaviorSubject<Todo[] | undefined>(undefined);
 
-  constructor(private httpClient: HttpClient) {
-    httpClient.get<TodosResponseDto>('https://dummyjson.com/todos?limit=5').subscribe((response: TodosResponseDto) => {
-      this.todos = response.todos;
-    });
+  protected remainingTodosCount$: Observable<number> = this.todos$.pipe(
+    filter((todos): todos is Todo[] => todos !== undefined),
+    map((todos): number => todos.reduce((count, { completed }) => count + (completed ? 0 : 1), 0)),
+  );
+
+  constructor(private appService: AppService) {}
+
+  ngOnInit(): void {
+    this.appService.fetchTodos().subscribe((todos) => this.todos$.next(todos));
   }
 
-  remainingTodosCount() {
-    let count = 0;
-    for (let i = 0; i < this.todos.length; i++) {
-      if (!this.todos[i].completed) {
-        count++;
-      }
-    }
-    return count;
-  }
-
-  checkboxId(todo: TodosResponseDto['todos'][0]) {
-    return 'check-' + todo.id;
-  }
-
-  toggleTodo(todo: TodosResponseDto['todos'][0]) {
+  toggleTodo(todo: Todo) {
     todo.completed = !todo.completed;
+    this.todos$.next(this.todos$.value);
   }
 }
