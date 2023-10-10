@@ -2,8 +2,4 @@
 
 <p>Remaining: {{ remainingTodosCount() }}</p>
 
-<ul>
-  <li *ngFor="let todo of todos" [class.todo-completed]="todo.completed" role="presentation" (click)="toggleTodo(todo)">
-    {{ todo.todo }}
-  </li>
-</ul>
+<app-todo-list *ngIf="todos" [todos]="todos" (toggleTodo)="toggleTodo($event)" />

@@ -1,0 +1,12 @@
+li {
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #eee;
+  }
+}
+
+.todo-completed {
+  text-decoration: line-through;
+}

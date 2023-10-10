@@ -1,0 +1,10 @@
+<ul>
+  <li
+    *ngFor="let todo of todos"
+    [class.todo-completed]="todo.completed"
+    role="presentation"
+    (click)="toggleTodo.emit(todo)"
+  >
+    {{ todo.todo }}
+  </li>
+</ul>
